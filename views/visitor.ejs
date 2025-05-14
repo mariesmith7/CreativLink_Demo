@@ -1,0 +1,34 @@
+<!-- visitor page -->
+ <%- include('partials/header') -%>
+
+<main class="dashboardContainer">
+
+  <!-- welcome for vistors -->
+  <h1>Welcome, <%= user.userName %> (Visitor)</h1>
+
+  <!-- upcoming exhibitions and art shows -->
+  <section>
+    <h2> Explore Exhibitions, Art Events  </h2>
+    <p> Discover local art shows, exhibitions, and art events happening near you. </p>
+
+    <!-- where to loop the events -->
+    <!-- fetch api results -->
+      <div id="eventResults" class="eventGrid" data-fetch="true">
+        <!-- This section will populaye via dashboard.js -->
+        <p> Loading events....</p>
+      </div>
+    </section>
+
+  <!-- AI event search -->
+  <section class="aiSearchSection">
+    <h2>Find Events with AI</h2>
+    <form id="aiSearchForm">
+      <input type="text" id="aiQuery" placeholder="e.g. sculpture shows in Philly" required />
+      <button type="submit">Search</button>
+    </form>
+    <div id="searchResults" class="searchResults"> </div>
+  </section>
+
+</main>
+
+<%- include('partials/footer') -%>

@@ -1,0 +1,60 @@
+<!-- artist dashboard, after login or signup on index/login -->
+
+<%- include('partials/header' ) -%>
+
+<main class="dashboardContainer">
+  <h1>Welcome, <%= user.userName %>!</h1> 
+
+  <!-- profile info -->
+  <section>
+    <h2>Your Profile</h2>
+    <p><strong>Email:</strong> <%= user.email %></p>
+
+    <form enctype="multipart/form-data">
+      <label>Upload Photo:</label>
+      <input type="file" name="photo" />
+    </form>
+
+    <!-- <label>Bio (100 words max):</label> -->
+    <label>“Artist Statement: Tell us about yourself (max 100 words)”</label>
+    <textarea maxlength="700" rows="4"></textarea>
+  </section>
+
+  <!-- Artwork Upload -->
+  <section>
+    <h2>Artistist Highlights</h2>
+      <span> Showcase Your Top 3 Pieces </span>
+    <input type="file" name="artwork1" />
+    <input type="file" name="artwork2" />
+    <input type="file" name="artwork3" />
+  </section>
+
+  <!-- socials media/ contact information  -->
+  <section>
+    <h2> Let Others Find You Online </h2>
+    <span> Stay Connected </span>
+    <input type="text" placeholder="Social Media handle" />
+    <input type="text" placeholder="Website or portfolio" />
+  </section>
+
+  <!-- AI Search -->
+  <section>
+    <h2>Search Events with AI</h2>
+    <form id="aiSearchForm">
+      <input type="text" id="aiQuery" placeholder="Search for art events..." />
+      <button type="submit">Search</button>
+    </form>
+    <div id="searchResults"></div>
+  </section>
+
+   <!-- Eventbrite Events -->
+<section>
+  <h2>Upcoming Art Events</h2>
+  <div id="eventResults" class="eventGrid" data-fetch="true">
+    <p>Loading events...</p>
+  </div>
+</section>
+
+</main>
+
+<%- include('partials/footer') -%>

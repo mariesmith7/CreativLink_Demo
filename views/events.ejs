@@ -1,0 +1,57 @@
+
+<%- include('partials/header') -%>
+
+<!-- Main section for displaying events -->
+<main class="eventsPage">
+
+  <!-- page heading -->
+  <h1 class="eventsTitle">All Events</h1>
+
+  <!-- search bar for filtering by city -->
+  <form action="/event" method="GET" class="eventSearchForm">
+    <label for="city" class="eventSearchLabel">Search by City:</label>
+    <input type="text" name="city" id="city" placeholder="e.g., New York, Philadelphia" class="eventSearchInput" />
+    <button type="submit" class="eventSearchButton">Search</button>
+  </form>
+
+  <!-- If no events -->
+  <% if (!events || events.length === 0) { %>
+    <p class="noEventsMessage">No upcoming art events found for this location.</p>
+
+  <!-- loop through each event if there are any -->
+  <% } else { %>
+    <ul class="eventsList">
+      <% events.forEach(event => { %>
+        <li class="eventCard">
+          
+          <!-- event title -->
+          <h2 class="eventTitle"><%= event.title %></h2>
+
+          <!-- event description -->
+          <% if (event.description) { %>
+            <p class="eventDescription"><%= event.description %></p>
+          <% } %>
+
+          <!-- event date -->
+          <% if (event.date) { %>
+            <p class="eventDate"><strong>Date:</strong> <%= event.date %></p>
+          <% } %>
+
+          <!-- event location -->
+          <% if (event.location) { %>
+            <p class="eventLocation"><strong>Location:</strong> <%= event.location %></p>
+          <% } %>
+
+          <!-- external link -->
+          <% if (event.url) { %>
+            <p><a href="<%= event.url %>" target="_blank" class="eventLink">View Event</a></p>
+          <% } %>
+
+        </li>
+      <% }) %>
+    </ul>
+  <% } %>
+
+</main>
+
+<%- include('partials/footer') -%>

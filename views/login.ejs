@@ -1,0 +1,48 @@
+<%- include('partials/header') -%>
+
+
+<!-- main login container section -->
+<main class="loginContainer">
+  <div class="loginRow">
+
+    <!-- login form box -->
+    <section class="loginBox">
+     <!-- error messages -->
+     <% if (messages.error) { %>
+      <% messages.error.forEach(msg => { %>
+        <div class="alertError"><%= msg %></div>
+      <% }) %>
+    <% } %>
+
+      <!-- info message -->
+      <% if (locals.messages.info) { %>
+        <% messages.info.forEach(el => { %>
+          <div class="alertInfo"><%= el.msg %></div>
+        <% }) %>
+      <% } %>
+
+
+       <!-- login form starts here -->
+      <form action="/login" method="POST">
+        <!-- email input field -->
+        <div class="formGroup">
+          <label for="email" class="formLabel">Email address</label>
+          <input type="email" id="email" name="email" class="formInput" />
+        </div>
+
+        <!-- password input field -->
+        <div class="formGroup">
+          <label for="password" class="formLabel">Password</label>
+          <input type="password" id="password" name="password" class="formInput" />
+        </div>
+
+        <!-- submit button -->
+        <button type="submit" class="loginBtn">Submit</button>
+      </form>
+    </section>
+  </div>
+</main>
+
+
+<!-- footer layout -->
+<%- include('partials/footer') -%>

@@ -1,0 +1,809 @@
+/*////////////////////////////////*/
+/* INDEX PAGE STYLES (Index.ejs) */
+/*////////////////////////////////*/
+ 
+/* page background */
+body {
+  background-image: url('/imgs/georgy-trofimov-0AIepn7lUrg-unsplash.jpg'); /* make sure this image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  /* inserting background image later, need to create image and logo */
+}
+
+
+/*  logo  */
+.logo {
+width: 160px;
+height: 140px;
+/* this centers block elements horizontally */
+/*margin: 0 auto; 
+display: block; */
+margin-left:20px;
+}
+
+
+/* main content wrapper */
+.maincontainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* header section */
+.mainheading {
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  color:rgb(217, 243, 20);
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(151, 151, 151, 0.7);  /* shadow */
+}
+
+.subheading {
+  text-align: center;
+  font-size: 26px;
+  color: rgb(252, 250, 250);
+  width:70%;
+  font-weight: 600;
+  margin: 0 auto; 
+  text-align: center; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.365); /* shadow */
+  
+}
+
+.sectionheading{
+ 
+  width: 50%;
+  margin: 0 auto; 
+  text-align: center; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* featured event section*/
+.eventgrid{
+  color: white;
+  font-weight: bold;
+}
+
+/* role cards section */
+.rolessection {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.rolecard {
+  flex: 1;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.654);
+  border: 2px solid rgb(217, 243, 20); ;
+  
+  border-radius: 6px;
+  text-align: center;
+  gap: 10px;
+
+  
+}
+
+.roletitle {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.roledescription {
+  font-size: 16px;
+  color: #333;
+}
+
+/* role selection section */
+.roleselection {
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 80px;
+}
+
+.rolelabel {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.roleSelectContainer {
+  display: inline-flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.roledropdown {
+  padding: 10px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.continuebtn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.continuebtn:hover {
+  background-color: #0056b3;
+}
+
+
+
+/* featured exhibition/ art show */
+.featuredsection {
+  margin-top: 60px;
+}
+
+.sectionheading {
+  text-align: center;
+  font-size: 28px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.eventgrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.eventcard {
+  flex: 1 1 calc(33.33% - 20px);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.eventtitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.eventdate {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.eventdescription {
+  font-size: 14px;
+  color: #333;
+}
+
+.noevents {
+  text-align: center;
+  color: #999;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 20px;
+} 
+
+/* role description */
+.rolessection{
+margin-bottom: 100px;
+}
+
+
+/* visitor label */
+.roleSelectAction {
+  margin-top: 15px;
+}
+
+
+.visitorlabel {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  justify-content: center; 
+  text-align: center; 
+  padding-bottom: 10px; 
+  font-weight: bold; 
+  font-size: 16px;  
+}
+
+/* sign in here to explore more event */
+.signup-link {
+  color: white;
+  font-weight: 700;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 70px;
+  display: inline-block;
+  text-align: center;
+  text-decoration:none;
+  font-size: 16;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.signup-link-wrapper {
+  text-align: center;
+  margin-top: 20px;
+  color: lime;
+}
+
+.visitorSelectContainer {
+  display:flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+
+/* continue here */
+.viewmore {
+  text-align: center;
+  font-weight: 700;
+  color: white;
+}
+
+.visitorSelectContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px; 
+}
+
+.visitordropdown{
+  width: 150px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.301);
+  border: 2px solid  rgb(217, 243, 20);
+  color: white;
+  font-weight:bold;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px; 
+  transition: background-color 0.2s ease;
+}
+
+.visitorbtn {
+  width: 90px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.301);
+  border: 2px solid  rgb(217, 243, 20);
+  color: white;
+  font-weight:bold;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px; 
+  transition: background-color 0.2s ease;
+}
+
+.visitorbtn:hover {
+  background-color: rgba(0, 0, 0, 0.1); 
+}
+
+
+
+
+/*////////////////////////////////*/
+/* LOGIN PAGE STYLES (login.ejs) */
+/*////////////////////////////////*/
+
+
+
+   /*
+   .loginContainer {
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 40px 20px; */
+
+    .loginContainer {
+      background: url('/images/bg.jpg') center/cover no-repeat;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+  }
+  
+  .loginRow {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  }
+  
+  .loginBox {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      width: 100%;
+  }
+  
+  .formGroup {
+    margin-bottom: 20px;
+  }
+  
+  .formLabel {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+  }
+  
+  .formInput {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .loginBtn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .loginBtn:hover {
+    background-color: #0056b3;
+  }
+  
+  .alertError {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+  
+  .alertInfo {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+
+
+
+
+
+/*////////////////////////////////*/
+/* SIGNUP PAGE STYLES (signup.ejs) */
+/*////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*////////////////////////////////*/
+/* ARTIST PAGE STYLES (login.ejs) */
+/*////////////////////////////////*/
+
+/* blue background dashboard with neon green border */
+.dashboardContainer {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid rgb(217, 243, 20); /* Neon green */
+  border-radius: 12px;
+  padding: 30px;
+  margin: 40px auto;
+  width: 90%;
+  max-width: 1000px;
+  box-shadow: 0 0 20px rgba(217, 243, 20, 0.5);
+}
+
+/* Main header */
+.dashboardContainer h1 {
+  color: rgb(217, 243, 20);
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(151, 151, 151, 0.7);
+  font-size: 34px;
+  text-align: center;
+}
+
+/* Section headings */
+.dashboardContainer h2 {
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+
+
+/* orofile section: mini header and email text */
+.dashboardContainer section:first-of-type h2 {
+  color: rgb(217, 243, 20);
+  font-size: 16px; 
+  text-shadow: 1px 1px 2px rgba(151, 151, 151, 0.6);
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+/* Email display */
+.dashboardContainer section:first-of-type p {
+  color: rgb(217, 243, 20);
+  font-size: 16px;
+  margin-bottom: 12px;
+font-weight: 600;
+  color: #ffffff; 
+  margin-bottom: 60px;
+}
+
+/* Optional: make email bold look clean */
+.dashboardContainer section:first-of-type p strong {
+  color:  rgb(217, 243, 20);
+  font-weight: 600;
+  color: #ffffff; 
+}
+
+
+/* Eventbrite section heading */
+#eventResults ~ h2,
+section:last-of-type h2 {
+  color: rgb(217, 243, 20);
+  text-shadow: 2px 2px 4px rgba(151, 151, 151, 0.7);
+}
+
+/* input fields and textareas */
+.dashboardContainer input[type="text"],
+.dashboardContainer input[type="file"],
+.dashboardContainer textarea {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* labels */
+.dashboardContainer label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  color: white ;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* Ai form styles */
+#aiSearchForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 100px;
+}
+
+#aiSearchForm input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+#aiSearchForm button {
+  padding: 10px 20px;
+  background-color: rgb(217, 243, 20);
+  color: black;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#aiSearchForm button:hover {
+  background-color: #e4ff3d;
+}
+
+/* Event display grid */
+.eventGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  color: white;
+}
+
+
+
+
+/*////////////////////////////////*/
+/* CURATOR PAGE STYLES (curator.ejs) */
+/*////////////////////////////////*/
+
+ /* DASHBOARD CONTAINER (shared with artist theme)*/
+.dashboardContainer {
+  background: rgba(0, 0, 0, 0.4); /* blur look */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid rgb(0, 195, 255); /* blue for curator */
+  border-radius: 12px;
+  padding: 30px;
+  margin: 40px auto;
+  width: 90%;
+  max-width: 1000px;
+  box-shadow: 0 0 20px rgba(0, 195, 255, 0.5);
+}
+
+/* MAIN header */
+.dashboardContainer h1 {
+  color: rgb(0, 195, 255);
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(151, 151, 151, 0.7);
+  font-size: 34px;
+  text-align: center;
+}
+
+/* SECTION TITLES */
+.dashboardContainer h2 {
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+/* LABELS*/
+.dashboardContainer label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* FORM FIELDS */
+.dashboardContainer input[type="text"],
+.dashboardContainer input[type="file"],
+.dashboardContainer input[type="date"],
+.dashboardContainer textarea {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* form button */
+.submitBtn {
+    background-color: rgb(0, 195, 255);
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.submitBtn:hover {
+  background-color: #45e3ff;
+}
+
+/* curator layout split  */
+.curatorEventSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+/* Left column: form */
+.eventFormContainer {
+  flex: 1;
+  min-width: 300px;
+  max-width: 48%;
+}
+
+/* right side: event previews */
+.eventPreviewContainer {
+  flex: 1;
+  min-width: 300px;
+  max-width: 48%;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 20px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); /* using for transparency */
+  box-shadow: 0 0 10px rgba(217, 243, 20, 0.2);
+  color: white;
+}
+
+/* individual event card */
+.eventCard {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+/* Event title */
+.eventCard h3 {
+  color: rgb(0, 195, 255);
+  font-size: 20px;
+  margin-bottom: 8px;
+  text-shadow: 1px 1px 3px rgba(151, 151, 151, 0.7);
+}
+
+/* Event details */
+.eventCard p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #f1f1f1;
+}
+
+.eventCard p strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+
+
+
+/*////////////////////////////////*/
+/* VISITOR PAGE STYLES (visitor.ejs) */
+/*////////////////////////////////*/
+
+
+/* VISITOR CONTAINER */
+.dashboardContainer {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid rgb(255, 133, 27); /* Neon orange */
+  border-radius: 12px;
+  padding: 30px;
+  margin: 40px auto;
+  width: 90%;
+  max-width: 1000px;
+  box-shadow: 0 0 20px rgba(255, 133, 27, 0.5); /* burnt orange shadow */
+
+}
+
+/* MAIN HEADER  */
+.dashboardContainer h1 {
+  color: rgb(255, 133, 27);
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(151, 151, 151, 0.7);
+  font-size: 34px;
+  text-align: center;
+}
+
+/* SECTION TITLES */
+.dashboardContainer h2 {
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+/* Para. under each section title */
+.dashboardContainer section p {
+  font-size: 16px;
+  color: #f1f1f1;
+  margin-bottom: 12px;
+}
+
+/* AI Search Form  */
+#aiSearchForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+#aiSearchForm input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+#aiSearchForm button {
+  padding: 10px 20px;
+  background-color: rgb(255, 133, 27); /* Neon orange */
+  color: black;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#aiSearchForm button:hover {
+  background-color: #ff994d;
+}
+
+/* Event Results grid */
+.eventGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 250px); /* mdn - fix width, 250 wide */
+  gap: 20px;
+  margin-top: 20px;
+  color: white;
+  justify-content: center;
+}
+
+/* Optional: AI search results if used */
+.searchResults {
+  margin-top: 20px;
+  color: white;
+}
+
+
+
+
+/*////////////////////////////////*/
+/* FOOTER PAGE STYLES (footer.ejs) */
+/*////////////////////////////////*/
+
+
+/* footer */
+footer {
+  text-align: center;
+  padding: 6px 0; 
+  background-color: #00000065;
+  color: white;
+  font-size: 14px;
+}

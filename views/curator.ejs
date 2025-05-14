@@ -1,0 +1,84 @@
+<!-- curator dashboard page -->
+
+<%- include('partials/header') -%>
+
+<main class="dashboardContainer">
+
+  <!-- welcome/ h1-->
+  <h1>Welcome, <%= user.userName %> (Curator)</h1>
+
+  <!-- Split view for the container -->
+  <section class="curatorEventSection">
+
+    <!-- LEFT: Create Event Form -->
+    <div class="eventFormContainer">
+    <h2> Create a New Exhibition or an Art Event </h2>
+
+    <form action="/event/create" method="POST"  class="eventForm">
+      <!-- enctype="multipart/form-data" -->
+
+
+     <div class="formGroup">
+        <label for="title">Event Title</label>
+        <input type="text" id="title" name="title" required />
+    </div>
+
+      <div class="formGroup">
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location" required />
+      </div>
+
+      <div class="formGroup">
+        <label for="date">Event Date</label>
+        <input type="date" id="date" name="date" required />
+      </div>
+
+      <div class="formGroup">
+        <label for="description">Description</label>
+        <textarea id="description" name="description" rows="4" placeholder=" Briefly describe your event "></textarea>
+      </div>
+
+      <div class="formGroup">
+        <label for="image"> Event Image/Flyer <em> (optional) </em> </label>
+        
+        <input type="file" id="image" name="image" accept="image/*" />
+      </div>
+
+      <button type="submit" class="submitBtn"> Create Event </button>
+    </form>
+    </div>
+
+
+
+ <!-- Rightside- created events display -->
+ <div class="eventPreviewContainer">
+  <h2>Your Submitted Events</h2>
+
+<!-- for loop -->
+    <% for(var i=0; i<events.length; i++) {%>
+       <div>  
+        <span>  <%-  events[i].title  -%>  </span>
+        <span>  <%-  events[i].date  -%>  </span> 
+        <span>  <%-  events[i].location -%>  </span>
+        <span>  <%-  events[i].description  -%> </span>
+        <span>  <%-  events[i].createdBy  -%>  </span>
+          
+       </div>
+    <% } %>
+      </div>
+
+  </section>
+
+  <!-- if there is time, create a curator manage event, so they can loop through/edit -->
+</main>
+
+<%- include('partials/footer') -%>
+
+<!--title: { type: String, required: true },
+  description: String,
+  // event date
+  date: String,
+
+// location
+  location: String,
+  createdBy: -->

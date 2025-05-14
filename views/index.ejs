@@ -1,0 +1,112 @@
+<!-- the <%-  -%> means render this file and interpret any ejs inside of it  -->
+<%- include('partials/header') -%>
+
+<!-- main or div / with is set to max / -->
+<main class="maincontainer">
+
+  <!-- main section of web page  -->
+  <!-- margin-bottom of 64px -->
+  <h1 class="mainheading">
+    Connecting Artists, Curators & Communities Through Creative Events
+  </h1>
+  <p class="subheading">
+    Find art shows. Submit work. Host events. Celebrate creativity.
+  </p>
+
+  <!-- featured exhibitions/artshow Section -->
+  <section class="featuredsection">
+
+    <h2 class="sectionheading">
+      Upcoming Exhibitions & Art Shows
+    </h2>
+
+    <!-- fetching the data -->
+    <div id="eventResults" class="eventgrid" data-fetch="true">
+      <!-- leaving visual gap, event appears here -->
+    </div>
+
+    <!-- view more section -->
+    <div class="viewmore">
+      <a href="/signup" class="signup-link">
+        Sign in here to explore more events and exhibitions.
+      </a>
+    </div>
+
+  </section>
+
+
+
+  <!-- Role Descriptions Section -->
+  <section class="rolessection">
+    <!-- Artist -->
+    <div class="rolecard">
+      <h3 class="roletitle">Join as an Artist</h3>
+      <p class="roledescription">
+        Showcase your work, build a profile, and get discovered by curators and communities.
+      </p>
+    </div>
+
+    <!-- Curator -->
+    <div class="rolecard">
+      <h3 class="roletitle">Join as a Curator</h3>
+      <p class="roledescription">
+        Host open calls, manage events, and showcase emerging and established artists.
+      </p>
+    </div>
+
+    <!-- Visitor -->
+    <div class="rolecard">
+      <h3 class="roletitle">Join as a Visitor</h3>
+      <p class="roledescription">
+        Explore exhibits, art shows, and discover creative events near you.
+      </p>
+    </div>
+  </section>
+
+
+
+  <!-- user role (artist, curator, visitor) -->
+<div class="viewmore">
+  <label for="roleSelectAction" class="visitorlabel">
+    Continue Here 
+  </label>
+
+  <div class="visitorSelectContainer">
+
+    <select id="roleSelectAction" class="visitordropdown">
+      <option value="">Select your role</option>
+      <option value="artist">Artist</option>
+      <option value="curator">Curator</option>
+      <option value="visitor">Visitor</option>
+    </select>
+
+    <select id="authType" class="visitordropdown">
+      <option value="">Sign Up or Log In</option>
+      <option value="signup">Sign Up</option>
+      <option value="login">Log In</option>
+    </select>
+
+    <button onclick="goToAuth()" class="visitorbtn">
+      Continue
+    </button>
+  </div>
+</div>
+
+<script>
+  function goToAuth() {
+    const role = document.getElementById('roleSelectAction').value;
+    const auth = document.getElementById('authType').value;
+
+    if (!role || !auth) {
+      alert("Please select both role and action.");
+      return;
+    }
+
+    // redirect with query param - tracking role
+    window.location.href = "/" + auth + "?role=" + role;
+  }
+</script>
+
+</main>
+
+<%- include('partials/footer') -%>
