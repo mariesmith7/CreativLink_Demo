@@ -264,6 +264,7 @@ display: block; */
 /* featured exhibition/ art show */
 .featuredsection {
   margin-top: 60px;
+  margin-bottom: 60px; /* ✅ added space below the events */
 }
 
 .sectionheading {
@@ -326,32 +327,44 @@ display: block; */
   margin-top: 15px;
 }
 
-
-.visitorlabel {
-  color: white;
+/* layout row for label + role dropdown  auth dropdown and button */
+.visitorActionRow {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding-bottom: 10px;
+  gap: 20px; /* spacing between label and controls */
+  margin-top: 30px;
+  flex-wrap: wrap; /* breaks to 1 on cellphones */
+}
+
+/* update label to stay inline and not stack */
+.visitorlabel {
+  color: white;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
+  white-space: nowrap;
+  padding: 6px 12px; /* match button height/padding */
+  backgroud: rgba(255, 255, 255, 0.21);
+  border-radius: 4
 }
 
 /* sign in here to explore more event */
 .signup-link {
   color: white;
-  font-weight: 700;
-  font-weight: bold;
-  text-decoration: none;
-  margin-bottom: 70px;
+  font-weight: 300;          /* thin font */
+  font-size: 16px;
+  text-decoration: underline; /* underline text */
   display: inline-block;
+  margin-top: 20px;
   text-align: center;
+  padding-bottom: 3px;  
+  text-decoration: none;  
+}
+
+.signup-link:hover {
   text-decoration: none;
-  font-size: 16;
-  padding: 20px;
-  margin: 0 auto;
+  color: rgb(217, 243, 20); /* neon green on hover */
 }
 
 .signup-link-wrapper {
@@ -360,11 +373,17 @@ display: block; */
   color: rgb(217, 243, 20);
 }
 
+
+
 .visitorSelectContainer {
   display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: center;
+}
+
+visitorlabel{
+
 }
 
 /* continue here */
@@ -409,6 +428,31 @@ display: block; */
 }
 
 .visitorbtn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+.buttonUnified,
+.visitorbtn,
+.submitButton,
+.loginBtn {
+  background-color: rgba(255, 255, 255, 0.301); /* translucent white bg */
+  border: 2px solid rgb(217, 243, 20);          /* neon green border */
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 6px 12px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* hover effect for all buttons */
+.buttonUnified:hover,
+.visitorbtn:hover,
+.submitButton:hover,
+.loginBtn:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -519,6 +563,120 @@ display: block; */
 /*////////////////////////////////*/
 /* SIGNUP PAGE STYLES (signup.ejs) */
 /*////////////////////////////////*/
+
+/* signup page container with background image and center alignment */
+.signupContainer {
+  background: url('/images/bg.jpg') center center / cover no-repeat;
+  min-height: 100vh; /* full height of screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* space around page edges */
+}
+
+/* signup form box with gloss glass effect */
+.signupBox {
+  width: 100%;
+  max-width: 600px; /* fixed max width */
+  background: rgba(255, 255, 255, 0.15); /* semi-transparent background */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 40px; /* inner spacing for form */
+  border-radius: 16px; /* rounded corners */
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.25); /* soft outer shadow */
+}
+
+/* signup header title */
+.signupTitle {
+  color: white;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+/* subtitle below the title */
+.signupSubtitle {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+/* form layout section spacing */
+.signupForm .formGroup {
+  margin-bottom: 20px;
+}
+
+/* labels for each input/select */
+.signupForm .formLabel {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: white;
+  font-size: 14px;
+}
+
+/* input fields */
+.signupForm .formInput {
+  width: 70%; /* fixed width */
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #cccccc;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* dropdown selector */
+.signupForm .formSelect {
+  width: 70%; /* fixed width */
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #cccccc;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* signup button */
+.submitButton {
+  width: 70%; /* match inputs */
+  padding: 10px 24px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: block;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* button hover effect */
+.submitButton:hover {
+  background-color: #0056b3;
+}
+
+/* error + info alert messages */
+.alert-danger,
+.alert-info {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 

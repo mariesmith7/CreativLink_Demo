@@ -1,76 +1,81 @@
-  <!-- visitor/artist/curator signup page to browse and look for events -->
+<!-- visitor/artist/curator signup page to browse and look for events -->
 <%- include('partials/header') -%>
 
   <!-- visitor/artist/curator signup page to browse and look for events -->
   <main class="signupContainer">
 
-    <!-- header title create your account -->
-    <h1 class="signupTitle">Create Your Account</h1>
-    <p class="signupSubtitle">
-      Choose your role and start your journey with CreativLink.
-    </p>
+    <!-- signup form wrapper with gloss background -->
+    <div class="signupBox">
 
-<!-- code to display error messages -->
-    <% if (locals.messages.errors) { %>
-      <% messages.errors.forEach( el => { %>
+      <!-- header title create your account -->
+      <h1 class="signupTitle">Create Your Account</h1>
+      <p class="signupSubtitle">
+        Choose your role and start your journey with CreativLink.
+      </p>
+
+      <!-- code to display error messages -->
+      <% if (locals.messages.errors) { %>
+        <% messages.errors.forEach(el => { %>
           <div class="alert alert-danger"><%= el.msg %></div>
-      <% }) %>    
-  <% } %>
-  <% if (locals.messages.info) { %>
-      <% messages.info.forEach( el => { %>
+        <% }) %>
+      <% } %>
+      <% if (locals.messages.info) { %>
+        <% messages.info.forEach(el => { %>
           <div class="alert alert-info"><%= el.msg %></div>
-      <% }) %>    
-  <% } %>
+        <% }) %>
+      <% } %>
 
- <!-- forms -->
-<form action="/signup" method="POST" class="signupForm">
+      <!-- forms -->
+      <form action="/signup" method="POST" class="signupForm">
 
-  <!-- username -->
-  <div class="formGroup">
-    <label for="userName" class="formLabel">User Name</label>
-    <input type="text" id="userName" name="userName" class="formInput" required />
-  </div>
+        <!-- username -->
+        <div class="formGroup">
+          <label for="userName" class="formLabel">User Name</label>
+          <input type="text" id="userName" name="userName" class="formInput" required />
+        </div>
 
-    <!-- email -->
-    <div class="formGroup">
-      <label for="email" class="formLabel">Email Address</label>
-      <input type="email" id="email" name="email" class="formInput" required />
-    </div>
+        <!-- email -->
+        <div class="formGroup">
+          <label for="email" class="formLabel">Email Address</label>
+          <input type="email" id="email" name="email" class="formInput" required />
+        </div>
 
-      <!-- password -->
-      <div class="formGroup">
-        <label for="password" class="formLabel">Password</label>
-        <input type="password" id="password" name="password" class="formInput" required />
-      </div>
+        <!-- password -->
+        <div class="formGroup">
+          <label for="password" class="formLabel">Password</label>
+          <input type="password" id="password" name="password" class="formInput" required />
+        </div>
 
-      <!-- password confirmation-->
-      <div class="formGroup">
-        <label for="confirmPassword" class="formLabel">Confirm Password</label>
-        <input type="password" id="confirmPassword" name="confirmPassword" class="formInput" required />
-      </div>
+        <!-- password confirmation-->
+        <div class="formGroup">
+          <label for="confirmPassword" class="formLabel">Confirm Password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" class="formInput" required />
+        </div>
 
-      <!-- dropdown menu for roles (artist, curator, visitor) -->
-      <div class="formGroup">
-        <label for="role" class="formLabel">Sign Up As</label>
-        <select id="role" name="role" class="formSelect" required>
+        <!-- dropdown menu for roles (artist, curator, visitor) -->
+        <div class="formGroup">
+          <label for="role" class="formLabel">Sign Up As</label>
+          <select id="role" name="role" class="formSelect" required>
 
-          <!-- choosing role -->
-          <option value="">-- Choose a Role --</option>
-          <!-- If the role is 'artist', this one will be selected -->
-          <option value="artist" <%= role === 'artist' ? 'selected' : '' %>>Artist</option>
+            <!-- choosing role -->
+            <option value="">-- Choose a Role --</option>
+            <!-- If the role is 'artist', this one will be selected -->
+            <option value="artist" <%= role === 'artist' ? 'selected' : '' %>>Artist</option>
 
-          <!-- If the role is 'curator', this one will be selected -->
-          <option value="curator" <%= role === 'curator' ? 'selected' : '' %>>Curator</option>
+            <!-- If the role is 'curator', this one will be selected -->
+            <option value="curator" <%= role === 'curator' ? 'selected' : '' %>>Curator</option>
 
-          <!-- If the role is 'visitor', this one will be selected -->
-          <option value="visitor" <%= role === 'visitor' ? 'selected' : '' %>>Visitor</option>
+            <!-- If the role is 'visitor', this one will be selected -->
+            <option value="visitor" <%= role === 'visitor' ? 'selected' : '' %>>Visitor</option>
 
-        </select>
-      </div>
+          </select>
+        </div>
 
-      <!-- button -->
-      <button type="submit" class="submitButton">Sign Up</button>
-    </form>
+        <!-- button -->
+        <button type="submit" class="submitButton">Sign Up</button>
+      </form>
+
+    </div> 
 
   </main>
 
