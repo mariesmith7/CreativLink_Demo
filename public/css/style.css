@@ -365,37 +365,39 @@ display: block; */
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 20px; /* spacing between label and controls */
+  gap: 5px; /* spacing between label and controls */
   margin-top: 30px;
+  margin-bottom: 30px;
   flex-wrap: wrap; /* breaks to 1 on cellphones */
 }
 
 /* update label to stay inline and not stack */
 .visitorlabel {
-  color: white;
+  color: rgb(70, 69, 69);
   font-weight: bold;
   font-size: 14px;
+  border: 1px solid rgb(70, 69, 69);
   white-space: nowrap;
-  padding: 6px 12px; /* match button height/padding */
-  background: rgba(255, 255, 255, 0.21);
+  padding: 6px 6px; /* match button height/padding */
+  background:rgba(255, 255, 255, 0.833);
   border-radius: 4
 }
 
 /* sign in here to explore more event */
 .signup-link {
-  color:black;
+  color:white;
   font-weight: 400;          /* thin font */
-  font-size: 16px;
+  font-size: 14px;
   text-decoration: underline; /* underline text */
   display: inline-block;
   margin-top: 20px;
   text-align: center;
   padding-bottom: 3px;  
   text-decoration: none;  
-  background: rgba(255, 255, 255, 0.473);
+  /* background: rgba(255, 255, 255, 0.833); */
   border-radius: 4;
   
-  width: 30%;
+  width: 40%;
   height:20%;
  
 }
@@ -433,17 +435,17 @@ display: block; */
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
 }
 
 .visitordropdown {
   width: 150px;
   height: 30px;
-  background-color: rgba(255, 255, 255, 0.301);
-  border: 2px solid rgb(217, 243, 20);
-  color: white;
+  background-color: rgba(255, 255, 255, 0.833);
+  border: 2px solid rgba(0, 0, 0, 0.562);
+  color: rgb(70, 69, 69);
   font-weight: bold;
-  gap: 10px;
+  gap: 5px;
   cursor: pointer;
   font-size: 14px;
   border-radius: 4px;
@@ -453,9 +455,9 @@ display: block; */
 .visitorbtn {
   width: 90px;
   height: 30px;
-  background-color: rgba(255, 255, 255, 0.301);
-  border: 2px solid rgb(217, 243, 20);
-  color: white;
+  background-color: rgba(255, 255, 255, 0.833);
+  border: 2px solid rgba(0, 0, 0, 0.562);
+  color: rgb(70, 69, 69);
   font-weight: bold;
   cursor: pointer;
   font-size: 14px;
@@ -472,9 +474,9 @@ display: block; */
 .visitorbtn,
 .submitButton,
 .loginBtn {
-  background-color: rgba(255, 255, 255, 0.301); /* translucent white bg */
-  border: 2px solid rgb(217, 243, 20);          /* neon green border */
-  color: white;
+  background-color: rgba(255, 255, 255, 0.833); /* translucent white bg */
+  border: 2px solid rgba(0, 0, 0, 0.562);          /* neon green border */
+  color: rgb(70, 69, 69);
   font-weight: bold;
   font-size: 14px;
   padding: 6px 12px;
