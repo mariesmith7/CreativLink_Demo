@@ -969,8 +969,64 @@ section:last-of-type h2 {
   max-width: 48%;
 }
 
+
+
+
 /* right side: event previews */
+/* Container for all submitted events */
 .eventPreviewContainer {
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 20px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px rgba(217, 243, 20, 0.2);
+  color: white;
+}
+
+/* Each event block */
+.eventPreviewContainer div {
+  margin-bottom: 12px;
+  padding: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  background-color: rgba(255,255,255,0.05);
+}
+
+/* Title styling */
+.eventPreviewContainer div span:first-child {
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Date */
+.eventPreviewContainer div span:nth-child(2) {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* Location, Description, CreatedBy */
+.eventPreviewContainer div span:nth-child(3),
+.eventPreviewContainer div span:nth-child(4) {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+/* Created By */
+.eventPreviewContainer div span:nth-child(5) {
+  display: block;
+  font-size: 14px;
+  font-style: italic;
+  color: #ccc;
+}
+
+
+
+/*.eventPreviewContainer {
   flex: 1;
   min-width: 300px;
   max-width: 48%;
@@ -979,12 +1035,12 @@ section:last-of-type h2 {
   padding: 20px;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  /* using for transparency */
+  /* using for transparency 
   box-shadow: 0 0 10px rgba(217, 243, 20, 0.2);
   color: white;
 }
 
-/* individual event card */
+/* individual event card 
 .eventCard {
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid #ccc;
@@ -993,7 +1049,7 @@ section:last-of-type h2 {
   border-radius: 10px;
 }
 
-/* Event title */
+/* Event title 
 .eventCard h3 {
   color: rgb(0, 195, 255);
   font-size: 20px;
@@ -1001,7 +1057,7 @@ section:last-of-type h2 {
   text-shadow: 1px 1px 3px rgba(151, 151, 151, 0.7);
 }
 
-/* Event details */
+/* Event details 
 .eventCard p {
   margin: 4px 0;
   font-size: 14px;
@@ -1013,7 +1069,7 @@ section:last-of-type h2 {
   font-weight: 600;
 }
 
-
+*/
 
 
 /*////////////////////////////////*/
