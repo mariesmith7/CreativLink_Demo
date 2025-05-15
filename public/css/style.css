@@ -18,6 +18,18 @@ body {
 }
 
 
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.147); /* adjust  for lighter/darker tint */
+  z-index: -1; /* behind the content */
+}
+
+
 /*  logo  */
 .logo {
   width: 160px;
@@ -39,7 +51,7 @@ display: block; */
 
 
 .glassSection {
-  background: rgba(74, 74, 74, 0.053); /* translucent white */
+  background: rgba(238, 238, 238, 0.229); /* translucent white */
   border: 1px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -54,18 +66,21 @@ display: block; */
 /* header section */
 .mainheading {
   text-align: center;
+   font-family: 'Georgia', serif; 
   font-size: 48px;
   font-weight: bold;
-  color: rgb(217, 243, 20);
-  margin-bottom: 35px;
-  text-shadow: 2px 2px 4px rgba(151, 151, 151, 0.7);
+  color: rgb(225, 253, 11);
+  /* color: rgb(27, 225, 255); */
+  margin-bottom: 45px;
+  text-shadow: 2px 2px 4px rgba(150, 149, 149, 0.7);
   /* shadow */
 }
 
 .subheading {
   text-align: center;
-  font-size: 26px;
-  color: rgb(252, 250, 250);
+   font-family: 'Georgia', serif; 
+  font-size: 22px;
+  color: rgb(250, 251, 252);
   width: 70%;
   font-weight: 600;
   margin: 0 auto;
@@ -79,6 +94,7 @@ display: block; */
 .sectionheading {
 
   width: 50%;
+   font-family: 'Georgia', serif; 
   margin: 0 auto;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
