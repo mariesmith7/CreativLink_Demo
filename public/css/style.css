@@ -509,6 +509,7 @@ display: block; */
 
 .loginContainer {
   background: url('/images/bg.jpg') center/cover no-repeat;
+  background: rgba(255, 255, 255, 0.298);/* translucent white */
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   min-height: 100vh;
@@ -516,8 +517,7 @@ display: block; */
   justify-content: center;
   align-items: center;
   padding: 20px;
-  width: 40%;
-  height: 40%;
+
 }
 
 .loginRow {
@@ -616,7 +616,7 @@ display: block; */
 .signupBox {
   width: 100%;
   max-width: 600px; /* fixed max width */
-  background: rgba(255, 255, 255, 0.15); /* semi-transparent background */
+  background: rgba(255, 255, 255, 0.298); /* translucent white */
   border: 1px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -734,7 +734,7 @@ display: block; */
 
 /* blue background dashboard with neon green border */
 .dashboardContainer {
-  background: rgba(0, 0, 0, 0.4);
+  bbackground: rgba(255, 255, 255, 0.298); /* translucent white */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 2px solid rgb(217, 243, 20);
@@ -877,7 +877,7 @@ section:last-of-type h2 {
 
 /* DASHBOARD CONTAINER (shared with artist theme)*/
 .dashboardContainer {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.298); /* translucent white */
   /* blur look */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -1079,7 +1079,7 @@ section:last-of-type h2 {
 
 /* VISITOR CONTAINER */
 .dashboardContainer {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.298);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 2px solid rgb(255, 133, 27);
