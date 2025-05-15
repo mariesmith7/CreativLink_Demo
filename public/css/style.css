@@ -33,7 +33,7 @@ display: block; */
 .maincontainer {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 10px 20px;
 }
 
 
@@ -81,7 +81,7 @@ display: block; */
   width: 50%;
   margin: 0 auto;
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.524);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 
   font-size: 18px;
   color: white;
@@ -314,10 +314,10 @@ display: block; */
 }
 
 .eventcard {
-  flex: 1 1 calc(33.33% - 20px);
+  flex: 1;
   background-color: #fff;
   padding: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid white;
   border-radius: 6px;
   box-sizing: border-box;
 }
@@ -326,6 +326,7 @@ display: block; */
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
+  color:black;
 }
 
 .eventdate {
@@ -382,8 +383,8 @@ display: block; */
 
 /* sign in here to explore more event */
 .signup-link {
-  color:rgb(217, 243, 20) ;
-  font-weight: 800;          /* thin font */
+  color:black;
+  font-weight: 400;          /* thin font */
   font-size: 16px;
   text-decoration: underline; /* underline text */
   display: inline-block;
@@ -391,7 +392,14 @@ display: block; */
   text-align: center;
   padding-bottom: 3px;  
   text-decoration: none;  
+  background: rgba(255, 255, 255, 0.473);
+  border-radius: 4;
+  
+  width: 30%;
+  height:20%;
+ 
 }
+
 
 .signup-link:hover {
   text-decoration: none;
