@@ -565,7 +565,7 @@ display: block; */
 }
 
 .loginBtn {
-  background-color: #007bff;
+  background-color: #000000;
   color: white;
   border: none;
   padding: 10px 24px;
@@ -684,7 +684,7 @@ display: block; */
   width: 70%; /* match inputs */
   padding: 10px 24px;
   font-size: 16px;
-  background-color: #007bff;
+  background-color: #000000;
   color: white;
   border: none;
   border-radius: 6px;
