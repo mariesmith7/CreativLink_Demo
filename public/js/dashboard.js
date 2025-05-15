@@ -24,54 +24,58 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Please enter a search');
         return;
       }
+// type events in here* 
+      resultsContainer.innerHTML = `<p>Event 1 happy days</p>
+      <span> come visit today</span>`;
 
-      resultsContainer.innerHTML = 'Searching...';
+      // try {
+      //   // fetch api to create a http post req 
+      //   const response = await fetch('/search/ai', {
+      //     method: 'POST',
+      //     headers: { 'Content-Type': 'application/json' },
+      //     body: JSON.stringify({ query })
+      //   });
 
-      try {
-        // fetch api to create a http post req 
-        const response = await fetch('/search/ai', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ query })
-        });
+      //   const data = await response.json();
+      //   resultsContainer.innerHTML = '';
 
-        const data = await response.json();
-        resultsContainer.innerHTML = '';
-
-        if (data && data.results && data.results.length > 0) {
-          data.results.forEach(function(event) {
-            const div = document.createElement('div');
-            div.className = 'eventResult';
+      //   if (data && data.results && data.results.length > 0) {
+      //     data.results.forEach(function(event) {
+      //       const div = document.createElement('div');
+      //       div.className = 'eventResult';
            
-            const title = event.title;
-            const location = event.location;
-            const description = event.description;
-            const url = event.url;
-            const date = event.date ? event.date : 'Date TBA';
+      //       const title = event.title;
+      //       const location = event.location;
+      //       const description = event.description;
+      //       const url = event.url;
+      //       const date = event.date ? event.date : 'Date TBA';
 
-            div.innerHTML = `
-              <h3>${title}</h3>
-              <p><strong>Location:</strong> ${location}</p>
-              <p><strong>Date:</strong> ${date}</p>
-              <p>${description}</p>
-              <a href="${url}" target="_blank">View Event</a>
-            `;
+      //       div.innerHTML = `
+      //         <h3>${title}</h3>
+      //         <p><strong>Location:</strong> ${location}</p>
+      //         <p><strong>Date:</strong> ${date}</p>
+      //         <p>${description}</p>
+      //         <a href="${url}" target="_blank">View Event</a>
+      //       `;
 
-            resultsContainer.appendChild(div);
-          });
-        } else {
-          resultsContainer.innerHTML = 'No events found.';
-        }
-      } catch (error) {
-        console.error('AI search failed:', error);
-        resultsContainer.innerText = 'An error occurred while searching.';
-      }
+      //       resultsContainer.appendChild(div);
+      //     });
+      //   } else {
+      //     resultsContainer.innerHTML = 'No events found.';
+      //   }
+      // } catch (error) {
+      //   console.error('AI search failed:', error);
+      //   resultsContainer.innerText = 'An error occurred while searching.';
+      // }
     });
   }
 
-
+////////////////////////////////////
+//reflects on index.ejs
+////////////////////////////////////
 
 //  load eventbrite events
+/*
 if (eventResults && eventResults.dataset.fetch === 'true') {
   fetchEventbriteEvents();
 }
@@ -117,6 +121,6 @@ async function fetchEventbriteEvents() {
   } catch (err) {
     console.error('Error loading Eventbrite events:', err);
     eventResults.innerHTML = '<p> Error loading external events. </p>';
-  }
-}
+  } 
+}*/
 });

@@ -34,7 +34,7 @@ const router = express.Router();
 
 // GET: Fetch events from Eventbrite
 router.get('/events', async (req, res) => {
- /* try {
+  try {
     const response = await axios.get('https://www.eventbriteapi.com/v3/events/search', {
       headers: {
         'Authorization': `Bearer ${process.env.EVENTBRITE_TOKEN}`,
@@ -50,7 +50,7 @@ router.get('/events', async (req, res) => {
   } catch (err) {
     console.error('Event API error:', err);
     res.status(500).json({ error: 'Failed to fetch events from Eventbrite.' });
-  }*/
+  }
 }); 
 
 module.exports = router;

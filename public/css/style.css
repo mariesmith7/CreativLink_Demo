@@ -1,10 +1,13 @@
 /*////////////////////////////////*/
 /* INDEX PAGE STYLES (Index.ejs) */
 /*////////////////////////////////*/
- 
+/* Chrome, Safari, Edge will need -webkit- FireFox doesnt display properly */
+
+
 /* page background */
 body {
-  background-image: url('/imgs/georgy-trofimov-0AIepn7lUrg-unsplash.jpg'); /* make sure this image */
+  background-image: url('/imgs/georgy-trofimov-0AIepn7lUrg-unsplash.jpg');
+  /* make sure this image */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -17,12 +20,12 @@ body {
 
 /*  logo  */
 .logo {
-width: 160px;
-height: 140px;
-/* this centers block elements horizontally */
-/*margin: 0 auto; 
+  width: 160px;
+  height: 140px;
+  /* this centers block elements horizontally */
+  /*margin: 0 auto; 
 display: block; */
-margin-left:20px;
+  margin-left: 20px;
 }
 
 
@@ -38,35 +41,147 @@ margin-left:20px;
   text-align: center;
   font-size: 48px;
   font-weight: bold;
-  color:rgb(217, 243, 20);
+  color: rgb(217, 243, 20);
   margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(151, 151, 151, 0.7);  /* shadow */
+  text-shadow: 2px 2px 4px rgba(151, 151, 151, 0.7);
+  /* shadow */
 }
 
 .subheading {
   text-align: center;
   font-size: 26px;
   color: rgb(252, 250, 250);
-  width:70%;
+  width: 70%;
   font-weight: 600;
-  margin: 0 auto; 
-  text-align: center; 
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.365); /* shadow */
-  
+  margin: 0 auto;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.365);
+  margin-bottom: 7px; /* tightened further */
+  /* shadow */
+
 }
 
-.sectionheading{
- 
+.sectionheading {
+
   width: 50%;
-  margin: 0 auto; 
-  text-align: center; 
+  margin: 0 auto;
+  text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+  font-size: 18px;
+  color: white;
+  margin-bottom: 7px; /* tightened spacing between heading and events */
 }
+
+
 
 /* featured event section*/
-.eventgrid{
+/* make the event section a scrollable row */
+/*horizontal*/
+/* event display styles */
+
+.eventgrid {
   color: white;
   font-weight: bold;
+  display: flex;
+  overflow-x: auto;
+  /* left to right */
+  flex-wrap: nowrap; /* keep all cards in one row */
+  gap: 10px; /* space between cards */
+  padding: 20px 0;
+  scroll-snap-type: x mandatory;
+  /* makes scroll stop at each card (scroll feature) */
+  -webkit-overflow-scrolling: touch;
+  /* smooth movement feature, works best on cellphones */
+
+  /* Firefox scrollbar support */
+  scrollbar-width: thin; /* slim scrollbar */
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+  margin-top: 20px; /* reduced to tighten spacing below the heading */
+}
+
+/* design - custom scrollbar style */
+.eventgrid::-webkit-scrollbar {
+  height: 8px; /* horizontal scrollbar height */
+}
+
+.eventgrid::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3); /* thumb (scroll handle) color */
+  border-radius: 4px;
+  /* minicurve */
+}
+
+.eventgrid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+/* Style for each event card */
+.eventdescription {
+  flex: 0 0 260px;
+  /* keep width fixed */
+  background-color: rgba(232, 229, 229, 0.408);
+  color: white;
+  border: 1px solid rgb(217, 243, 20);
+  padding: 16px;
+  border-radius: 8px;
+  scroll-snap-align: start;
+  /* scroll snap in its place */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+
+/* Style the image inside the card */
+.eventdescription img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  /* keeps image from stretching */
+  border-radius: 4px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+
+/* Event title text */
+.eventtitle {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+/* Event description paragraph */
+.eventdesc {
+  font-size: 14px;
+  line-height: 1.4;
+  /* 19.6px  */
+  margin-bottom: 8px;
+  color: white;
+}
+
+
+/* date info and location */
+.date,
+.eventlocation,
+.eventaddress,
+.eventaddinfo {
+  font-size: 13px;
+  color: black;
+}
+
+
+/* Style for Learn More link */
+.moreinfo a {
+  color: black;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.moreinfo a:hover {
+  text-shadow: 0 0 5px rgb(217, 243, 20)
 }
 
 /* role cards section */
@@ -81,13 +196,14 @@ margin-left:20px;
   flex: 1;
   padding: 30px;
   background-color: rgba(255, 255, 255, 0.654);
-  border: 2px solid rgb(217, 243, 20); ;
-  
+  border: 2px solid rgb(217, 243, 20);
+  ;
+
   border-radius: 6px;
   text-align: center;
   gap: 10px;
 
-  
+
 }
 
 .roletitle {
@@ -197,11 +313,11 @@ margin-left:20px;
   font-size: 16px;
   width: 100%;
   margin-top: 20px;
-} 
+}
 
 /* role description */
-.rolessection{
-margin-bottom: 100px;
+.rolessection {
+  margin-bottom: 100px;
 }
 
 
@@ -215,12 +331,12 @@ margin-bottom: 100px;
   color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;  
-  justify-content: center; 
-  text-align: center; 
-  padding-bottom: 10px; 
-  font-weight: bold; 
-  font-size: 16px;  
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 /* sign in here to explore more event */
@@ -232,7 +348,7 @@ margin-bottom: 100px;
   margin-bottom: 70px;
   display: inline-block;
   text-align: center;
-  text-decoration:none;
+  text-decoration: none;
   font-size: 16;
   padding: 20px;
   margin: 0 auto;
@@ -241,11 +357,11 @@ margin-bottom: 100px;
 .signup-link-wrapper {
   text-align: center;
   margin-top: 20px;
-  color: lime;
+  color: rgb(217, 243, 20);
 }
 
 .visitorSelectContainer {
-  display:flex;
+  display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: center;
@@ -262,20 +378,20 @@ margin-bottom: 100px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 10px; 
+  gap: 10px;
 }
 
-.visitordropdown{
+.visitordropdown {
   width: 150px;
   height: 30px;
   background-color: rgba(255, 255, 255, 0.301);
-  border: 2px solid  rgb(217, 243, 20);
+  border: 2px solid rgb(217, 243, 20);
   color: white;
-  font-weight:bold;
+  font-weight: bold;
   gap: 10px;
   cursor: pointer;
   font-size: 14px;
-  border-radius: 4px; 
+  border-radius: 4px;
   transition: background-color 0.2s ease;
 }
 
@@ -283,17 +399,17 @@ margin-bottom: 100px;
   width: 90px;
   height: 30px;
   background-color: rgba(255, 255, 255, 0.301);
-  border: 2px solid  rgb(217, 243, 20);
+  border: 2px solid rgb(217, 243, 20);
   color: white;
-  font-weight:bold;
+  font-weight: bold;
   cursor: pointer;
   font-size: 14px;
-  border-radius: 4px; 
+  border-radius: 4px;
   transition: background-color 0.2s ease;
 }
 
 .visitorbtn:hover {
-  background-color: rgba(0, 0, 0, 0.1); 
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 
@@ -305,93 +421,96 @@ margin-bottom: 100px;
 
 
 
-   /*
+/*
    .loginContainer {
     max-width: 500px;
     margin: 80px auto;
     padding: 40px 20px; */
 
-    .loginContainer {
-      background: url('/images/bg.jpg') center/cover no-repeat;
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-  }
-  
-  .loginRow {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+.loginContainer {
+  background: url('/images/bg.jpg') center/cover no-repeat;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.loginRow {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   max-width: 500px;
   padding: 20px;
-  }
-  
-  .loginBox {
-    width: 100%;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    background-color: #fff;
+}
 
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-      width: 100%;
-  }
-  
-  .formGroup {
-    margin-bottom: 20px;
-  }
-  
-  .formLabel {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: bold;
-  }
-  
-  .formInput {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  
-  .loginBtn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 24px;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .loginBtn:hover {
-    background-color: #0056b3;
-  }
-  
-  .alertError {
-    background-color: #f8d7da;
-    color: #721c24;
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 15px;
-  }
-  
-  .alertInfo {
-    background-color: #d1ecf1;
-    color: #0c5460;
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 15px;
-  }
+.loginBox {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fff;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  width: 100%;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+/* update the form input width */
+.formInput {
+  width: 70%; 
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  display: block; 
+}
+
+.loginBtn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.loginBtn:hover {
+  background-color: #0056b3;
+}
+
+.alertError {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.alertInfo {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
 
 
 
@@ -422,7 +541,8 @@ margin-bottom: 100px;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 2px solid rgb(217, 243, 20); /* Neon green */
+  border: 2px solid rgb(217, 243, 20);
+  /* Neon green */
   border-radius: 12px;
   padding: 30px;
   margin: 40px auto;
@@ -453,7 +573,7 @@ margin-bottom: 100px;
 /* orofile section: mini header and email text */
 .dashboardContainer section:first-of-type h2 {
   color: rgb(217, 243, 20);
-  font-size: 16px; 
+  font-size: 16px;
   text-shadow: 1px 1px 2px rgba(151, 151, 151, 0.6);
   margin-bottom: 8px;
   margin-top: 0;
@@ -464,21 +584,21 @@ margin-bottom: 100px;
   color: rgb(217, 243, 20);
   font-size: 16px;
   margin-bottom: 12px;
-font-weight: 600;
-  color: #ffffff; 
+  font-weight: 600;
+  color: #ffffff;
   margin-bottom: 60px;
 }
 
 /* Optional: make email bold look clean */
 .dashboardContainer section:first-of-type p strong {
-  color:  rgb(217, 243, 20);
+  color: rgb(217, 243, 20);
   font-weight: 600;
-  color: #ffffff; 
+  color: #ffffff;
 }
 
 
 /* Eventbrite section heading */
-#eventResults ~ h2,
+#eventResults~h2,
 section:last-of-type h2 {
   color: rgb(217, 243, 20);
   text-shadow: 2px 2px 4px rgba(151, 151, 151, 0.7);
@@ -504,7 +624,7 @@ section:last-of-type h2 {
   display: block;
   margin-top: 10px;
   margin-bottom: 4px;
-  color: white ;
+  color: white;
   font-weight: 500;
   font-size: 16px;
 }
@@ -559,12 +679,14 @@ section:last-of-type h2 {
 /* CURATOR PAGE STYLES (curator.ejs) */
 /*////////////////////////////////*/
 
- /* DASHBOARD CONTAINER (shared with artist theme)*/
+/* DASHBOARD CONTAINER (shared with artist theme)*/
 .dashboardContainer {
-  background: rgba(0, 0, 0, 0.4); /* blur look */
+  background: rgba(0, 0, 0, 0.4);
+  /* blur look */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 2px solid rgb(0, 195, 255); /* blue for curator */
+  border: 2px solid rgb(0, 195, 255);
+  /* blue for curator */
   border-radius: 12px;
   padding: 30px;
   margin: 40px auto;
@@ -618,16 +740,16 @@ section:last-of-type h2 {
 
 /* form button */
 .submitBtn {
-    background-color: rgb(0, 195, 255);
-    color: black;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-    transition: background-color 0.2s ease-in-out;
+  background-color: rgb(0, 195, 255);
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .submitBtn:hover {
@@ -660,7 +782,8 @@ section:last-of-type h2 {
   border-radius: 12px;
   padding: 20px;
   backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px); /* using for transparency */
+  -webkit-backdrop-filter: blur(5px);
+  /* using for transparency */
   box-shadow: 0 0 10px rgba(217, 243, 20, 0.2);
   color: white;
 }
@@ -707,13 +830,15 @@ section:last-of-type h2 {
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 2px solid rgb(255, 133, 27); /* Neon orange */
+  border: 2px solid rgb(255, 133, 27);
+  /* Neon orange */
   border-radius: 12px;
   padding: 30px;
   margin: 40px auto;
   width: 90%;
   max-width: 1000px;
-  box-shadow: 0 0 20px rgba(255, 133, 27, 0.5); /* burnt orange shadow */
+  box-shadow: 0 0 20px rgba(255, 133, 27, 0.5);
+  /* burnt orange shadow */
 
 }
 
@@ -762,7 +887,8 @@ section:last-of-type h2 {
 
 #aiSearchForm button {
   padding: 10px 20px;
-  background-color: rgb(255, 133, 27); /* Neon orange */
+  background-color: rgb(255, 133, 27);
+  /* Neon orange */
   color: black;
   border: none;
   border-radius: 6px;
@@ -778,7 +904,8 @@ section:last-of-type h2 {
 /* Event Results grid */
 .eventGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 250px); /* mdn - fix width, 250 wide */
+  grid-template-columns: repeat(auto-fit, 250px);
+  /* mdn - fix width, 250 wide */
   gap: 20px;
   margin-top: 20px;
   color: white;
@@ -802,8 +929,31 @@ section:last-of-type h2 {
 /* footer */
 footer {
   text-align: center;
-  padding: 6px 0; 
+  padding: 6px 0;
   background-color: #00000065;
   color: white;
   font-size: 14px;
+}
+
+
+
+
+
+
+
+/*////////////////////////////////*/
+/* MOBILE STYLES FOR EVENTGRID */
+/*////////////////////////////////*/
+@media screen and (max-width: 600px) {
+  .eventgrid {
+    justify-content: center;
+    padding: 20px 10px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .eventdescription {
+    flex: 0 0 90%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
 }

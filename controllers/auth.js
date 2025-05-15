@@ -19,7 +19,7 @@ exports.getLogin = (req, res) => {
   }
   //res.render("login", {
    // title: "Login",
-  res.render('signup', { role }); // sending the role to EJS to be selected
+  res.render('login', { role }); // sending the role to EJS to be selected
  // });
 };
 
